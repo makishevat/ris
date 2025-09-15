@@ -1,0 +1,75 @@
+#настройка 
+git config --global user.name "Makiseheva Tomiris"
+git config --global user.email "t_makisheva@kbtu.kz"
+git config --global init.defaultBranch main
+git config --global core.autocrlf true
+git config --global core.safecrlf warn
+
+#работа с проектом
+#создание репозитория
+git init
+#добавления файлов
+git add .
+#проверка состояния репозитория
+git status   
+#созадю коммит, коментирую что я сделала            
+git commit -m "First commit"
+
+#связываем с гитхаб
+git remote add origin https://github.com/t_makisheva/ris.git
+#меняю имя ветки или просто даю имя
+git branch -M main
+#отправляю изменения в гитхаб
+git push -u origin main   
+
+#Вношу изменения в код
+git add .
+git commit -m "Изменил код"
+git push 
+
+#смотрю историю,какие изменения были 
+git log
+#если хочу увидеть только однострочный формат
+
+--pretty="..." — определяет формат вывода.
+%h — укороченный хеш коммита.
+%ad — дата коммита.
+| — просто визуальный разделитель.
+%s — комментарий.
+%d — дополнения коммита («головы» веток или теги).
+%an — имя автора.
+--date=short — сохраняет формат даты коротким и симпатичным.
+
+#переключаюсь на коммит через хэш,айди
+git checkout <hash>
+#вывожу содержимое файла ris
+cat ris.html
+
+#возвращаюсь в текущюю ветку
+git switch main
+#содержимое текущей версии
+cat ris.html
+#даю тег для первой версии(текущей страницы)
+git tag v1
+#тег для предыдущей версии
+git checkout v1^
+cat hello.html
+#даю название
+git tag v1-beta
+#переключение по имени тега
+git checkout v1
+git checkout v1-beta
+#просмотр тегов
+git tag
+#просмотр тегов в логах
+git log main --all
+
+#переключаюсь на на осн ветку
+git switch main
+
+#Отмена изменений 
+git restore ris.html
+git status
+cat ris.html
+#Отмена проиндексированных изменений
+git restore --staged ris.html ( restore with --staged cleans index)
