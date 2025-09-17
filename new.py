@@ -1,6 +1,3 @@
-print("Hello wolrd!")
-
-#this is a comment
 
 #creating variables
 x = 5
