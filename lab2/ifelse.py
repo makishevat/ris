@@ -52,7 +52,7 @@ if x > 10:
   else:
     print("but not above 20.")
 
-#
+#if you for some reason have an if statement with no content
 a = 33
 b = 200
 
