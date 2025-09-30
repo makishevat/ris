@@ -90,7 +90,7 @@ radius=float(input("Enter radius: "))
 print(volume(radius))"""
 
 #10
-"""def unique():
+def unique():
     elements=input("Input a list: ")
     elements=elements.split()
     result=[]
@@ -99,8 +99,6 @@ print(volume(radius))"""
             result.append(i)
     return result
 
-print(unique())"""
-
 #11
 """def palindrome(str):
     return str==str[::-1]
@@ -108,10 +106,38 @@ print(unique())"""
 print(palindrome("madam"))"""
 
 #12
-"""def histogram(list1):
+def histogram(list1):
     for num in list1:
         print("*" *num)
 
-histogram([4,9,7])"""
 
 #13
+"""import random
+
+def guess():
+    print("Hello! What is your name?")
+    name=input()
+
+    number=random.randint(1,20)
+    print("Well, ", name,", I am thinking of a number between 1 and 20.")
+
+    guess_num=0
+    attepmt=0
+    
+    while guess_num!=number:
+        print("Take a guess.")
+        guess_num=int(input())
+        attepmt+=1
+
+        if guess_num < number:
+            print("Your guess is too low.")
+        elif guess_num > number:
+            print("Your guess is too high.")
+    print("Good job, " ,name ,"! You guessed my number in",attepmt, " guesses!")
+
+guess()"""
+
+
+    
+
+
