@@ -2,7 +2,7 @@ import re
 
 txt=input("Enter a string: ")
 
-x=re.search("^ab*$",txt)
+x=re.search(r"^ab*$",txt)
 
 if x:
     print("YES")
