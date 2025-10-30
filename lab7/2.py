@@ -38,6 +38,5 @@ while not done:
             if n==0: n=5
             else: n-=1
             start(n)
-        
-    clock.tick(FPS)
+
 pygame.quit()
