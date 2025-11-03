@@ -13,17 +13,17 @@ while not done:
         if event.type==pygame.QUIT:
             done=True
         if event.type==pygame.KEYDOWN and event.key==pygame.K_UP:
-            if posY>20:
-                posY-=20
+            if posY>=30:
+                posY-=25
         if event.type==pygame.KEYDOWN and event.key==pygame.K_DOWN:
             if posY<760:
-                posY+=20
+                posY+=25
         if event.type==pygame.KEYDOWN and event.key==pygame.K_LEFT:
-            if posX>20:
-                posX-=20
+            if posX>=30:
+                posX-=25
         if event.type==pygame.KEYDOWN and event.key==pygame.K_RIGHT:
             if posX<760:
-                posX+=20
+                posX+=25
     screen.fill((255,255,255))
     pygame.draw.circle(screen,(255,0,0),(posX,posY),25)
     pygame.display.flip()
