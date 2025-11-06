@@ -73,12 +73,12 @@ def drawRectangle(screen, mouse_pos, w, h, color):
     x = mouse_pos[0]
     y = mouse_pos[1]
     rect = pygame.Rect(x, y, w, h)
-    pygame.draw.rect(screen, color, rect, 3) # 4th parameter is outline of the rectangle
+    pygame.draw.rect(screen, color, rect, 3) 
 
 def drawCircle(screen, mouse_pos, color):
     x = mouse_pos[0]
     y = mouse_pos[1]
-    pygame.draw.circle(screen, color, (x, y), 100, 3) # 4th parameter is outline of the rectangle
+    pygame.draw.circle(screen, color, (x, y), 100, 3) 
 
 
 
