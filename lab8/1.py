@@ -121,8 +121,8 @@ while True:
     DISPLAYSURF.blit(background, (0,0))
     scores = font_small.render(str(SCORE), True, BLACK)
     DISPLAYSURF.blit(scores, (10,10))
-    collected = font_small.render(str(SCORE), True, BLACK)
-    DISPLAYSURF.blit(scores, (400 - 30,10))
+    collected = font_small.render(str(COINS), True, BLACK)
+    DISPLAYSURF.blit(collected, (400 - 30,10))
     
 
     #Moves and Re-draws all Sprites
