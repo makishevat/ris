@@ -82,8 +82,6 @@ class Coin(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40,SCREEN_WIDTH-40), 0)
         
-
-
     def move(self):
         global COINS
         self.rect.move_ip(0,COINSPEED)
@@ -107,26 +105,18 @@ all_sprites.add(P1)
 all_sprites.add(E1)
 all_sprites.add(COIN)
 
-#Adding a new User event 
-# INC_SPEED = pygame.USEREVENT + 1
-# pygame.time.set_timer(INC_SPEED, 1000)
-
-# level_duplicate = LEVEL
 def levelAdder():
     global LEVEL
     global SPEED
     if COINS // 4 > LEVEL:
         LEVEL += 1
         SPEED += 3
-        # print(SPEED)
 
 #Game Loop
 while True:
       
     #Cycles through all events occuring  
-    for event in pygame.event.get():
-        # if event.type == INC_SPEED:
-        #       SPEED += 0.5      
+    for event in pygame.event.get(): 
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
@@ -168,8 +158,6 @@ while True:
             pygame.mixer.Sound('collect.wav').play()
             for coin in coins:
                 coin.kill()
-        #   time.sleep(1)
-            # randomCoin = random.randint(1, 3)
             if COIN.randomCoin == 1:
                 COINS += 1
             if COIN.randomCoin == 2:
@@ -180,7 +168,7 @@ while True:
     if(len(coins) == 0): # if our coin was collected:
         
         # coin spawn
-        COIN = Coin()   # new coin object will be created and added to the coins group
+        COIN = Coin() # new coin object will be created and added to the coins group
         coins.add(COIN)
         all_sprites.add(COIN)
 
