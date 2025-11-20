@@ -18,7 +18,7 @@ dis = pygame.display.set_mode((dis_width, dis_height))
 pygame.display.set_caption("Snake Tomiris")
 
 # Game parameters
-snake_block = 20        # size of one snake block (segment)
+snake_block = 20        # size of one snake block 
 snake_speed = 3         # initial snake speed
 
 clock = pygame.time.Clock()
@@ -39,8 +39,8 @@ mango_img = pygame.transform.scale(mango_img, (snake_block, snake_block))
 food_images = [apple_img, grape_img, mango_img]
 
 # Initial snake coordinates (center)
-x1 = dis_width / 2
-y1 = dis_height / 2
+x1 = dis_width/2
+y1 = dis_height/2
 x1_change = 0
 y1_change = 0
 
@@ -65,9 +65,7 @@ elif food_img == mango_img:
 food_spawn_time = time.time() #when the food spawned
 food_lifetime = 10            #food disappears after 10s
 
-#Score
 score = 0
-
 game_over = False
 game_close = False
 
@@ -86,7 +84,6 @@ def message(m, color):
     mesg = font_style.render(m, True, color)
     dis.blit(mesg, [dis_width / 6, dis_height / 3])
 
-#Main game loop
 while not game_over:
 
     #Show game over screen
@@ -96,7 +93,6 @@ while not game_over:
         show_info(score)
         pygame.display.update()
 
-        #Player input on death screen
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 game_over = True
